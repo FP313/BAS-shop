@@ -9,7 +9,7 @@ let SavePos = 0;
 export async function getCards(count) {
     try {
         const token = localStorage.getItem("Token");
-        const res = await fetch('http://localhost:3000/api/card', {
+        const res = await fetch('/api/card', {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`

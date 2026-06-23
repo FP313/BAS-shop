@@ -3,7 +3,7 @@ const iconsContainer = document.querySelector('.imgIcons');
 async function render() {
      try {
         const token = localStorage.getItem("Token");
-        const res = await fetch('http://localhost:3000/api/imgFilter', {
+        const res = await fetch('/api/imgFilter', {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`

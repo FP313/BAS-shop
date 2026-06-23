@@ -13,7 +13,7 @@ async function DataByUrlId() {
     try{
 
         const token = localStorage.getItem("Token");
-        const res = await fetch(`http://localhost:3000/api/offer/${urlParamId}`, {
+        const res = await fetch(`/api/offer/${urlParamId}`, {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -64,7 +64,7 @@ async function updateElOffer(el) {
 async function getOffer() {
     try {
         const token = localStorage.getItem("Token");
-        const res = await fetch('http://localhost:3000/api/offer', {
+        const res = await fetch('/api/offer', {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`

@@ -7,7 +7,7 @@ let SavePos = 0;
 
 export async function getReviews(count) {
     try {
-        const res = await fetch('http://localhost:3000/api/reviews', {
+        const res = await fetch('/api/reviews', {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`
