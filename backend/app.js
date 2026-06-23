@@ -7,7 +7,7 @@ app.use(express.static('public'));
 
 import { ApiR } from './routes/api.js';
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(cors({
     origin: '*',
@@ -22,6 +22,6 @@ app.get("/main", (req, res)=>{
 
 app.use("/api", ApiR);
 
-app.listen(PORT, ()=>{
+app.listen(PORT, '0.0.0.0', ()=>{
     console.log(`Сервер на порту ${PORT}`);
 });
