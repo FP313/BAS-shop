@@ -9,6 +9,6 @@ moreReviwes.addEventListener("click", ()=>{viewMore(10)});
 
 function viewMore(count){
     getCards(count);
-    if(document.location.pathname.toLowerCase().endsWith('Offer.html'))
+    if(document.location.pathname.endsWith('Offer.html'))
         getReviews(count);
 }
