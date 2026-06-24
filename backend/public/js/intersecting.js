@@ -11,6 +11,7 @@ moreReviwes.addEventListener("click", ()=>{viewMore(10)});
 moreCatalogOffer.addEventListener("click", ()=>{viewMore(10)});
 
 function viewMore(count){
+    alert("gfdg");
     getCards(count);
     if(document.location.pathname.includes('Offer.html'))
         getReviews(count);
