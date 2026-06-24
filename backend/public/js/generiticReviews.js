@@ -1,18 +1,14 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-    getReviews(10);
+    if(document.location.pathname.includes('Offer.html')) getReviews(10);
 });
 
 let SavePos = 0;
 
 export async function getReviews(count) {
     try {
-        const res = await fetch('/api/reviews', {
-            method: 'GET',
-            headers: {
-                'Authorization': `Bearer ${token}`
-            }
-        });
+        const res = await fetch('/api/reviews/');
+
         const Reviews = await res.json();
 
         const reviewsContainer = document.querySelector('.itemsReviews');

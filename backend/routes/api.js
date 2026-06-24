@@ -30,7 +30,7 @@ ApiR.get(`/reviewSupport/delete/:id`, AbsDelete("ReviewSupport"));
 
 ApiR.get("/card/", [isAuth, checkPermissions(permissions.BUY_PROUCTS)],getCards);
 ApiR.get("/offer/", [isAuth, checkPermissions(permissions.BUY_PROUCTS)],getOffer);
-ApiR.get("/reviews/", [isAuth, checkPermissions(permissions.BUY_PROUCTS)],getReviews);
+ApiR.get("/reviews/", getReviews);
 ApiR.get(`/imgFilter/`, [isAuth, checkPermissions(permissions.BUY_PROUCTS)],getimgFilter);
 
 
