@@ -19,7 +19,7 @@ async function DataByUrlId() {
                 'Authorization': `Bearer ${token}`
             }
         });
-
+        alert(res.json());
         if (!res.ok){
             document.querySelector('.offer').innerHTML = `<div>Такого элемента нет</div>`;
             return;
