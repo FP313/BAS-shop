@@ -11,7 +11,7 @@ async function DataByUrlId() {
         return;
     };
     try{
-
+        console.log("fsdf");
         const token = localStorage.getItem("Token");
         const res = await fetch(`/api/offer/${urlParamId}`, {
             method: 'GET',
@@ -19,7 +19,7 @@ async function DataByUrlId() {
                 'Authorization': `Bearer ${token}`
             }
         });
-        alert(res.json());
+        console.log(res.json());
         if (!res.ok){
             document.querySelector('.offer').innerHTML = `<div>Такого элемента нет</div>`;
             return;
