@@ -82,11 +82,6 @@ async function getOffer() {
     }
 }
 
-
-
-
-
-
 function renderAdditionalInfo(cardElement, cardData) {
     const infoContainer = document.querySelector('.addicationOfferItem');
 

@@ -1,5 +1,5 @@
 import { getCards } from "../js/genereticCards.js"
-// import { getReviews } from "../js/generiticReviews.js"
+import { getReviews } from "../js/generiticReviews.js"
 
 const moreCatalog = document.querySelector(".moreCatalog");
 const moreReviwes = document.querySelector(".reviewsTextmore");
@@ -9,5 +9,6 @@ moreReviwes.addEventListener("click", ()=>{viewMore(10)});
 
 function viewMore(count){
     getCards(count);
-    // getReviews(count);
+    if(document.location.pathname.toLowerCase().endsWith('Offer.html'))
+        getReviews(count);
 }
