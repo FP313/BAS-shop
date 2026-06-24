@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 async function DataByUrlId() {
-    alert("fds");
     const urlParamId = new URLSearchParams(window.location.search).get('id');
     
     if(!urlParamId) {
@@ -12,7 +11,6 @@ async function DataByUrlId() {
         return;
     };
     try{
-        alert("fds");
         const token = localStorage.getItem("Token");
         const res = await fetch(`/api/offer/${urlParamId}`, {
             method: 'GET',
@@ -20,7 +18,6 @@ async function DataByUrlId() {
                 'Authorization': `Bearer ${token}`
             }
         });
-        alert("fds");
         if (!res.ok){
             document.querySelector('.offer').innerHTML = `<div>Такого элемента нет</div>`;
             return;
@@ -30,7 +27,6 @@ async function DataByUrlId() {
     }catch(er){console.log("ERROR");}
 };
 async function getHtmlOffer(offerItem) {
-    alert("fds o");
     return `
             <div class="imgInfoDiv">
                 <img src="${offerItem.ImageUrl}" alt="Упс ошибка загрузки" class="offerImg">
